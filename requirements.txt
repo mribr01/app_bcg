@@ -1,0 +1,7 @@
+dash==2.6.0
+scipy
+matplotlib
+numpy
+plotly
+dash_bootstrap_components
+gunicorn
