@@ -104,6 +104,7 @@ newt, signalBCG, respiration_signal, max_indices, bpm, intersections, bpmRespi =
 
 # Create Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Create figure object
 fig = go.Figure()
