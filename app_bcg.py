@@ -103,8 +103,8 @@ newt, signalBCG, respiration_signal, max_indices, bpm, intersections, bpmRespi =
 
 # Create Dash app
 
-app = dash.Dash(__name__)
-server = app.server  # Explicitly name the Dash app instance as 'server'
+app_bcg = dash.Dash(__name__)
+server = app_bcg.server  # Explicitly name the Dash app instance as 'server'
 
 
 # Create figure object
