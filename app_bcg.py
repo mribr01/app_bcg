@@ -12,7 +12,6 @@ import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
 
 
-
 def get_fft_values(y_values, T, N, f_s):
     f_values = np.linspace(0.0, 1.0/(2.0*T), N//2)
     fft_values_ = fft(y_values)
@@ -103,11 +102,13 @@ noise_amplitude = 2 # valeur qui va de 0 à 5
 newt, signalBCG, respiration_signal, max_indices, bpm, intersections, bpmRespi = generate_composite_signal(randomTime, respiration_amplitude, respiration_frequency, noise_amplitude)
 
 # Create Dash app
+
 app = dash.Dash(__name__)
+server = app.server  # Explicitly name the Dash app instance as 'server'
+
 
 # Create figure object
 fig = go.Figure()
-
 
 # Set up initial layout
 fig.update_layout(
